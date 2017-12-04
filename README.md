@@ -1,0 +1,2 @@
+# 100DaysOfCode
+Inspired by article I've read on Medium (https://goo.gl/yD8NGe) I decided to undertake a 100 Days of code challenge and document my progress in this repository. From now for the next 100 days I will code for at least one hour a day, no matter how much code I manage to write, what language I will use or how complex it will be (Maybe some days it will be just an hour of research) I wish to train my persistence and coding skills. 
