@@ -39,10 +39,3 @@ class AttendeeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Attendee
         fields = ('id', 'name', 'email', 'age', 'events')
-
-        # def update(self, instance, validated_data):
-        #     # Update the  instance
-        #     events_data = validated_data.pop('events')
-        #     instance.events, _ = Event.objects.update_or_create(many=True, **events_data)
-        #
-        #     return instance

@@ -32,7 +32,10 @@ urlpatterns = [
     url(r'^api-token-auth/', obtain_auth_token, name='auth-token'),
     url(r'^events/(?P<id>[0-9]+)/$', views.event_by_id, name='event-by-id'),
     url(r'^events/(?P<id>[0-9]+)/place/$', views.event_place_by_id, name='event-place-by-id'),
-    url(r'^attendees/(?P<name>\w{1,50})/events/(?P<id>[0-9]+)/$', views.attendee_event_by_id_by_name, name='attendee-events-by-id -by-name'),
+    url(r'^attendees/(?P<name>\w{1,50})/events/(?P<id>[0-9]+)/$', views.attendee_event_by_id_by_name, name='attendee'
+                                                                                                           '-events'
+                                                                                                           '-by-id '
+                                                                                                           '-by-name'),
     url(r'^attendees/(?P<name>\w{1,50})/events/$', views.attendee_events_by_name, name='attendee-events-by-name'),
     url(r'^attendees/(?P<name>\w{1,50})/$', views.attendee_by_name, name='attendee-by-name')
 ]

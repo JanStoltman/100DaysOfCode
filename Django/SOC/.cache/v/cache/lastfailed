@@ -1,7 +1,7 @@
 {
   "tests/quickstart/test_views.py::EventsAPITest::test_can_get_event_by_id": true,
   "tests/quickstart/test_views.py::EventsAPITest::test_can_get_event_by_id_positive": true,
-  "tests/quickstart/test_views.py::GETTest::test_event_places_by_id": true,
+  "tests/quickstart/test_views.py::GETTest::test_attendees_by_name": true,
   "tests/quickstart/test_views.py::TestAttendees::test_can_get_attendee_list": true,
   "tests/quickstart/test_views.py::TestToken::test_can_get_token": true
 }
