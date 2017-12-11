@@ -29,6 +29,7 @@ def main():
 			break
 
 	print i
+	print len(used) - used.index(''.join(str(e) for e in arr)) - 1
 	print arr
 
 if __name__ == "__main__":
