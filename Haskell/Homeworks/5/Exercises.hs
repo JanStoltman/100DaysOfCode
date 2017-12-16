@@ -2,6 +2,8 @@
 --
 module Exercises where
 import Data.Char
+import Data.List
+import Data.List.Split
 --
 
 {-
@@ -102,16 +104,18 @@ studentsPassed = filter (\(n,s) -> s > 50)
     isTitleCased "University Of Zagreb" => True
 -}
 
---isTitleCased :: String -> Bool
-isTitleCased xs = 0 < length . foldl (\a x -> if not $ isUpper $ x !! 1 then x ++ a else a) [] $ words
+isTitleCased :: String -> Bool
+isTitleCased = (==) 0 . length . foldl f [] . words
+  where f a x = if not $ isUpper $ x !! 0 then x : a else a
 
 {-
   3.2.
   - Define 'sortPairs' that sorts the list of pairs in ascending order with
     respect to the second element of a pair.
 -}
-
-sortPairs = undefined
+sortPairs :: Ord b => [(a,b)] -> [(a,b)]
+sortPairs = sortBy f
+  where f (a,b) (a1,b1) = compare b b1
 
 {-
   3.3.
@@ -121,7 +125,7 @@ sortPairs = undefined
 -}
 
 filename :: String -> String
-filename = undefined
+filename = head . Data.List.reverse . Data.List.Split.splitOn "/" 
 
 {-
   3.4.
@@ -131,8 +135,9 @@ filename = undefined
     maxElemIndices [1,3,4,1,3,4] => [2,5]
 -}
 
-maxElemIndices :: Ord a => [a] -> [Int]
-maxElemIndices = undefined
+--maxElemIndices :: Ord a => [a] -> [Int]
+maxElemIndices [] = error "Empty list"
+maxElemIndices l  = map (fst) . filter(\x -> snd x == maximum l) $ zip [0..] l
 
 -- EXERCISE 04 =======================================================================
 
@@ -210,8 +215,10 @@ maxUnzip (x:xs) = foldl (\(a,b) (x,y) -> (a `max` x, b `max` y)) x xs
     leading zeroes).
     showDate :: Date -> String
 -}
+data Date = Date Int Int Int
 
-showDate = undefined
+showDate :: Date -> String
+showDate (Date d m y) = show d ++ "." ++ show m ++ "." ++ show y
 
 {-
   1.2.
@@ -227,7 +234,8 @@ data Shape2 = Circle2 Point Double | Rectangle2 Point Point
   deriving Show
 
 translate :: Point -> Shape2 -> Shape2  
-translate = undefined
+translate (Point px py) (Circle2 (Point ppx ppy) r) = Circle2 (Point (ppx + px) (ppy + py)) r
+translate (Point px py) (Rectangle2 (Point px1 py1) (Point px2 py2)) = Rectangle2 (Point (px1 + px) (py1 + py)) (Point (px2 + px) (py2 + py))
 
 {-
   1.3.
@@ -240,10 +248,11 @@ translate = undefined
 -}
 
 inShape :: Shape2 -> Point -> Bool
-inShape = undefined
+inShape (Circle2 (Point x y) r) (Point px py)= (px - x)^2 + (py - y)^2 < r^2
+inShape (Rectangle2 (Point x y) (Point x1 y1)) (Point px py) = x <= px && y >= py && x1 >= px && y1 <= py
 
 inShapes :: [Shape2] -> Point -> Bool
-inShapes = undefined
+inShapes xs p = (/=) 0 $ length $ filter (\x -> inShape x p) xs
 
 {-
   1.4.
@@ -253,9 +262,14 @@ inShapes = undefined
   - Write a function 'totalHorsepower' that adds up the horsepower of the
     vehicles, assuming that bicycle's horsepower is 0.2.
 -}
+data Vehicle = Car String Double | Truck String Double | Motorcycle String Double | Bicycle
 
-totalHorsepower = undefined
 
+totalHorsepower = sum . map f
+  where f Bicycle          = 0.2
+        f (Car _ h)        = h
+        f (Truck _ h)      = h
+        f (Motorcycle _ h) = h
 
 -- EXERCISE 02 =======================================================================
 
@@ -277,7 +291,7 @@ data Student = Student
 -}
 
 improveStudent :: Student -> Student
-improveStudent = undefined
+improveStudent s = if avgGrade s <= 4.0 then s {avgGrade = avgGrade s + 1.0} else s
 
 {-
   2.2.
@@ -287,7 +301,12 @@ improveStudent = undefined
 -}
 
 avgGradePerLevels :: [Student] -> (Double, Double, Double)
-avgGradePerLevels = undefined
+avgGradePerLevels xs = (avGr b, avGr m, avGr p)
+  where b = filter (\x -> level x == Bachelor) xs
+        m = filter (\x -> level x == Master) xs
+        p = filter (\x -> level x == PhD) xs 
+
+avGr b = (sum $ map (\x -> avgGrade x) b) / genericLength b
 
 {-
   2.3.
@@ -297,7 +316,8 @@ avgGradePerLevels = undefined
 -}
 
 rankedStudents :: Level -> [Student] -> [String]
-rankedStudents = undefined
+rankedStudents l = map(\x -> studentId x) . sortBy f . filter (\x -> level x == l)
+  where f a b = compare (avgGrade a) (avgGrade b)
 
 {-
   2.4.
@@ -309,7 +329,7 @@ rankedStudents = undefined
 -}
 
 addStudent :: Student -> [Student] -> [Student]
-addStudent = undefined
+addStudent s xs = if (/=) 0 $ length $ filter (\x -> studentId x == studentId s) xs then error "Same id" else s:xs
 
 -- EXERCISE 03 =======================================================================
 
@@ -322,10 +342,13 @@ addStudent = undefined
     that converts a 'MyTriplet' value into an ordinary triplet.
 -}
 
-data MyTriplet a b c
+data MyTriplet a b c = MyTriplet
+  { mName :: a
+  , mAge  :: b 
+  , isOld :: c }
 
 toTriplet :: MyTriplet a b c -> (a, b, c)
-toTriplet = undefined
+toTriplet m = (mName m,mAge m,isOld m)
 
 {-
   3.2.
@@ -340,7 +363,9 @@ data Employee = Employee
   } deriving Show
 
 totalSalaries :: [Employee] -> Double
-totalSalaries = undefined
+totalSalaries = sum . map f 
+  where f (Employee _ Nothing)  = 0
+        f (Employee _ (Just d)) = d
 
 {-
   3.3.
@@ -351,6 +376,7 @@ totalSalaries = undefined
 -}
 
 addStudent2 :: Student -> [Student] -> Maybe [Student]
-addStudent2 = undefined
+addStudent2 s xs = if (/=) 0 $ length $ filter (\x -> studentId x == studentId s) xs then Nothing else Just (s:xs)
 
-addStudent3 = undefined
+addStudent3 :: Student -> [Student] -> Either String [Student]
+addStudent3 s xs = if (/=) 0 $ length $ filter (\x -> studentId x == studentId s) xs then Left "Same id" else Right (s:xs)
