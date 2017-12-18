@@ -56,18 +56,44 @@ def knot_hash(inp):
 import binascii
 
 def to_binary_string(t):
-	scale = 16 ## equals to hexadecimal
-	num_of_bits = len(t) * log2(scale)
-	bin(int(t, scale))[2:].zfill(num_of_bits)
+	thelen = len(t)*4
+	binval = bin(int(t, 16))[2:]
+	while ((len(binval)) < thelen):
+		binval = '0' + binval
+	return binval
+
+def del_nbh(tmp, x, y):
+	found = False
+	if tmp[x][y] == '1':
+		found = True 
+		tmp[x][y] = '0'
+		
+		if y > 0:
+			del_nbh(tmp, 
+		if y < 127:
+		if x > 0:
+		if x < 127:
+		
 
 inp = "nbysizxe"
-
+tmp = []
 for i  in range(0,128):
 	t = "{0}-{1}".format(inp, i)
-	print to_binary_string(knot_hash(t))
+	tmp.append(to_binary_string(knot_hash(t)))
+
+s = 0
+
+for y in range(0,128):
+	for x in range(0,128):		
+		if not '1' in tmp:
+			break
+	
+		tmp, found = del_nbh(x,y) 
+		if found:
+			s +=1 
 
 
-
+print tmp
 
 
 
