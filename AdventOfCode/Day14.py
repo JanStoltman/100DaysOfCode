@@ -49,11 +49,14 @@ def knot_hash(inp):
 			position  %= len(list(nums))
 			skip_size += 1
 
-	return reduce(lambda x,y: x + y, map(lambda x: hex(x)[2:], todensehash(nums)))
+	z = reduce(lambda x,y: x + y, map(lambda x: hex(x)[2:].zfill(2), todensehash(nums)))
+	return z
 
-#/DAY 10
+#</DAY 10>
 
 import binascii
+inp = "nbysizxe"
+tmp = []
 
 def to_binary_string(t):
 	thelen = len(t)*4
@@ -62,38 +65,38 @@ def to_binary_string(t):
 		binval = '0' + binval
 	return binval
 
-def del_nbh(tmp, x, y):
+def del_nbh(x, y):
 	found = False
 	if tmp[x][y] == '1':
 		found = True 
 		tmp[x][y] = '0'
 		
 		if y > 0:
-			del_nbh(tmp, 
-		if y < 127:
+			del_nbh(x,y - 1)
+		if y < len(tmp) - 1:
+			del_nbh(x,y + 1)
 		if x > 0:
-		if x < 127:
+			del_nbh(x - 1,y)
+		if x < len(tmp[y]) - 1:
+			del_nbh(x + 1,y)
+
+	return found
 		
 
-inp = "nbysizxe"
-tmp = []
 for i  in range(0,128):
 	t = "{0}-{1}".format(inp, i)
-	tmp.append(to_binary_string(knot_hash(t)))
+	tmp.append(list(to_binary_string(knot_hash(t))))
 
 s = 0
+print len(tmp)
+print len(tmp[0])
 
-for y in range(0,128):
-	for x in range(0,128):		
-		if not '1' in tmp:
-			break
-	
-		tmp, found = del_nbh(x,y) 
-		if found:
+for y in range(0,len(tmp)):
+	for x in range(0,len(tmp[0])):	
+		if del_nbh(x,y):
 			s +=1 
 
-
-print tmp
+print s
 
 
 
