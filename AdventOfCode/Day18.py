@@ -75,9 +75,6 @@ def repC(x):
 
 while i < len(lines) and j < len(lines):
 	print "i:{0} j:{1} su:{2}".format(i,j,su)
-	print regs
-	print A_q
-	print B_q
 
 	if cid == 'a':
 		dn, mv = repC(i) 
