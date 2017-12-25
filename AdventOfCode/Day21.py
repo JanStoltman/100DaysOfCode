@@ -1,3 +1,5 @@
+from array import array
+from itertools import chain
 mtr = [ ['.','#','.'],
 		['.','.','#'],
 		['#','#','#'] ]
@@ -16,11 +18,11 @@ def flip(m):
 			
 	return m
 
-def divide2(mtr):
-	return [mtr]
-
-def divide3(mtr):
-	return [mtr]
+def mtr_size(mtr):
+	if len(mtr) != len(mtr[0]):
+		raise Exception("len(mtr) != len(mtr[0])")
+	
+	return len(mtr[0]) 
 
 #Read instrucitons and create dictionares for matrices
 f = open("Day21DB")
@@ -39,22 +41,45 @@ for line in f.readlines():
 		ins[str(k)] = v
 		k = rotate(k)
 
-print len(ins)
-print ins[str(mtr)]
-
-for _ in range(0,5):
-	if len(mtr) != len(mtr[0]):
-		raise Exception("len(mtr) != len(mtr[0])")
+#Do main loop
+for _ in range(0,18):
+	size = 2 + len(mtr) % 2
+	t = []
 	
-	size = len(mtr[0]) 
+	for i in range(0,len(mtr),size):
+		tt = []
+		z  = []
+		for j in range(0,len(mtr),size):
+			ttt = []
+			for ii in range(i, i + size):
+				for jj in range(j, j + size):
+					ttt.append(mtr[ii][jj])
+				tt.append(ttt)
+				ttt = []
+			z.append(tt)
+			tt = []
+		t.append(z)
+		z = []
 
-	if   size > 2 and size % 2 == 0:
-		t = divide2(mtr)
-	elif size > 3 and size % 3 == 0:
-		t = divide3(mtr)
-	else:
-		t = [mtr]
+	t = map(lambda x: map(lambda xx: ins[str(xx)],x),t)
 
+	mtr = []
+	tl = []
+	for l in t:
+		tl.append([list(chain.from_iterable(x)) for x in zip(*l)])
+
+	for l in tl:
+		for ll in l:
+			mtr.append(ll)
+
+print mtr
+
+print sum([row.count('#') for row in mtr])
+#Screw this list manipulations 
+
+
+
+		
 	
 
 
