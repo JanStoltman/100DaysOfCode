@@ -1,0 +1,17 @@
+Configuring scalpel-core-0.5.1...
+Building scalpel-core-0.5.1...
+Preprocessing library scalpel-core-0.5.1...
+[1 of 6] Compiling Text.HTML.Scalpel.Internal.Select.Types ( src/Text/HTML/Scalpel/Internal/Select/Types.hs, dist/dist-sandbox-5247172a/build/Text/HTML/Scalpel/Internal/Select/Types.o )
+[2 of 6] Compiling Text.HTML.Scalpel.Internal.Select.Combinators ( src/Text/HTML/Scalpel/Internal/Select/Combinators.hs, dist/dist-sandbox-5247172a/build/Text/HTML/Scalpel/Internal/Select/Combinators.o )
+[3 of 6] Compiling Text.HTML.Scalpel.Internal.Select ( src/Text/HTML/Scalpel/Internal/Select.hs, dist/dist-sandbox-5247172a/build/Text/HTML/Scalpel/Internal/Select.o )
+
+src/Text/HTML/Scalpel/Internal/Select.hs:79:35: warning: [-Wunused-matches]
+    Defined but not used: ‘ctx’
+[4 of 6] Compiling Text.HTML.Scalpel.Internal.Scrape ( src/Text/HTML/Scalpel/Internal/Scrape.hs, dist/dist-sandbox-5247172a/build/Text/HTML/Scalpel/Internal/Scrape.o )
+[5 of 6] Compiling Text.HTML.Scalpel.Internal.Scrape.StringLike ( src/Text/HTML/Scalpel/Internal/Scrape/StringLike.hs, dist/dist-sandbox-5247172a/build/Text/HTML/Scalpel/Internal/Scrape/StringLike.o )
+[6 of 6] Compiling Text.HTML.Scalpel.Core ( src/Text/HTML/Scalpel/Core.hs, dist/dist-sandbox-5247172a/build/Text/HTML/Scalpel/Core.o )
+Creating package registration file:
+/tmp/pkgConf-scalpel-core-0.52145174067468703135.1
+Installing library in
+/home/yggdralisk/Desktop/100DaysOfCode/Haskell/MangaScrapper/.cabal-sandbox/lib/x86_64-linux-ghc-8.0.2/scalpel-core-0.5.1-Lsp3m8r03eKLp01rbssXBL
+Registering scalpel-core-0.5.1...

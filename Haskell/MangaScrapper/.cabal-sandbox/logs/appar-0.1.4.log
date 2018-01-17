@@ -1,0 +1,13 @@
+Configuring appar-0.1.4...
+Building appar-0.1.4...
+Preprocessing library appar-0.1.4...
+[1 of 5] Compiling Text.Appar.Input ( Text/Appar/Input.hs, dist/dist-sandbox-5247172a/build/Text/Appar/Input.o )
+[2 of 5] Compiling Text.Appar.Parser ( Text/Appar/Parser.hs, dist/dist-sandbox-5247172a/build/Text/Appar/Parser.o )
+[3 of 5] Compiling Text.Appar.LazyByteString ( Text/Appar/LazyByteString.hs, dist/dist-sandbox-5247172a/build/Text/Appar/LazyByteString.o )
+[4 of 5] Compiling Text.Appar.String ( Text/Appar/String.hs, dist/dist-sandbox-5247172a/build/Text/Appar/String.o )
+[5 of 5] Compiling Text.Appar.ByteString ( Text/Appar/ByteString.hs, dist/dist-sandbox-5247172a/build/Text/Appar/ByteString.o )
+Creating package registration file:
+/tmp/pkgConf-appar-0.11497983152038664370.4
+Installing library in
+/home/yggdralisk/Desktop/100DaysOfCode/Haskell/MangaScrapper/.cabal-sandbox/lib/x86_64-linux-ghc-8.0.2/appar-0.1.4-GrdmIsp0wE9Hh7Z5IGWzqk
+Registering appar-0.1.4...

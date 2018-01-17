@@ -1,0 +1,15 @@
+Configuring psqueues-0.2.4.0...
+Building psqueues-0.2.4.0...
+Preprocessing library psqueues-0.2.4.0...
+[1 of 7] Compiling Data.OrdPSQ.Internal ( src/Data/OrdPSQ/Internal.hs, dist/dist-sandbox-5247172a/build/Data/OrdPSQ/Internal.o )
+[2 of 7] Compiling Data.OrdPSQ      ( src/Data/OrdPSQ.hs, dist/dist-sandbox-5247172a/build/Data/OrdPSQ.o )
+[3 of 7] Compiling Data.BitUtil     ( src/Data/BitUtil.hs, dist/dist-sandbox-5247172a/build/Data/BitUtil.o )
+[4 of 7] Compiling Data.IntPSQ.Internal ( src/Data/IntPSQ/Internal.hs, dist/dist-sandbox-5247172a/build/Data/IntPSQ/Internal.o )
+[5 of 7] Compiling Data.HashPSQ.Internal ( src/Data/HashPSQ/Internal.hs, dist/dist-sandbox-5247172a/build/Data/HashPSQ/Internal.o )
+[6 of 7] Compiling Data.HashPSQ     ( src/Data/HashPSQ.hs, dist/dist-sandbox-5247172a/build/Data/HashPSQ.o )
+[7 of 7] Compiling Data.IntPSQ      ( src/Data/IntPSQ.hs, dist/dist-sandbox-5247172a/build/Data/IntPSQ.o )
+Creating package registration file:
+/tmp/pkgConf-psqueues-0.2.41592594701359512183.0
+Installing library in
+/home/yggdralisk/Desktop/100DaysOfCode/Haskell/MangaScrapper/.cabal-sandbox/lib/x86_64-linux-ghc-8.0.2/psqueues-0.2.4.0-ALfBv6EFbSQCzYZQd9kq1h
+Registering psqueues-0.2.4.0...

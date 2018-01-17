@@ -1,0 +1,13 @@
+Configuring utf8-string-1.0.1.1...
+Building utf8-string-1.0.1.1...
+Preprocessing library utf8-string-1.0.1.1...
+[1 of 5] Compiling Codec.Binary.UTF8.String ( Codec/Binary/UTF8/String.hs, dist/dist-sandbox-5247172a/build/Codec/Binary/UTF8/String.o )
+[2 of 5] Compiling Codec.Binary.UTF8.Generic ( Codec/Binary/UTF8/Generic.hs, dist/dist-sandbox-5247172a/build/Codec/Binary/UTF8/Generic.o )
+[3 of 5] Compiling Data.ByteString.Lazy.UTF8 ( Data/ByteString/Lazy/UTF8.hs, dist/dist-sandbox-5247172a/build/Data/ByteString/Lazy/UTF8.o )
+[4 of 5] Compiling Data.ByteString.UTF8 ( Data/ByteString/UTF8.hs, dist/dist-sandbox-5247172a/build/Data/ByteString/UTF8.o )
+[5 of 5] Compiling Data.String.UTF8 ( Data/String/UTF8.hs, dist/dist-sandbox-5247172a/build/Data/String/UTF8.o )
+Creating package registration file:
+/tmp/pkgConf-utf8-string-1.0.15726603361159126505.1
+Installing library in
+/home/yggdralisk/Desktop/100DaysOfCode/Haskell/MangaScrapper/.cabal-sandbox/lib/x86_64-linux-ghc-8.0.2/utf8-string-1.0.1.1-Ep3ZGIfeCePLAXQtchFCLs
+Registering utf8-string-1.0.1.1...

@@ -1,0 +1,20 @@
+Configuring servant-purescript-0.9.0.2...
+Building servant-purescript-0.9.0.2...
+Preprocessing library servant-purescript-0.9.0.2...
+[1 of 6] Compiling Servant.PureScript.Internal ( src/Servant/PureScript/Internal.hs, dist/dist-sandbox-5247172a/build/Servant/PureScript/Internal.o )
+[2 of 6] Compiling Servant.PureScript.CodeGen ( src/Servant/PureScript/CodeGen.hs, dist/dist-sandbox-5247172a/build/Servant/PureScript/CodeGen.o )
+[3 of 6] Compiling Servant.PureScript.MakeRequests ( src/Servant/PureScript/MakeRequests.hs, dist/dist-sandbox-5247172a/build/Servant/PureScript/MakeRequests.o )
+[4 of 6] Compiling Servant.PureScript.Subscriber ( src/Servant/PureScript/Subscriber.hs, dist/dist-sandbox-5247172a/build/Servant/PureScript/Subscriber.o )
+[5 of 6] Compiling Servant.PureScript ( src/Servant/PureScript.hs, dist/dist-sandbox-5247172a/build/Servant/PureScript.o )
+[6 of 6] Compiling Servant.API.BrowserHeader ( src/Servant/API/BrowserHeader.hs, dist/dist-sandbox-5247172a/build/Servant/API/BrowserHeader.o )
+
+src/Servant/API/BrowserHeader.hs:31:10: warning: [-Wmissing-methods]
+    • No explicit implementation for
+        ‘hoistServerWithContext’
+    • In the instance declaration for
+        ‘HasServer (BrowserHeader sym a :> sublayout) context’
+Creating package registration file:
+/tmp/pkgConf-servant-purescript-0.9.021147380972007905771.2
+Installing library in
+/home/yggdralisk/Desktop/100DaysOfCode/Haskell/MangaScrapper/.cabal-sandbox/lib/x86_64-linux-ghc-8.0.2/servant-purescript-0.9.0.2-22WBclEfavVCUop16BkW3N
+Registering servant-purescript-0.9.0.2...

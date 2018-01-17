@@ -1,0 +1,25 @@
+[1 of 1] Compiling Main             ( /tmp/cabal-tmp-15829/wreq-0.5.2.0/dist/dist-sandbox-5247172a/setup/setup.hs, /tmp/cabal-tmp-15829/wreq-0.5.2.0/dist/dist-sandbox-5247172a/setup/Main.o )
+Linking /tmp/cabal-tmp-15829/wreq-0.5.2.0/dist/dist-sandbox-5247172a/setup/setup ...
+Configuring wreq-0.5.2.0...
+Building wreq-0.5.2.0...
+Preprocessing library wreq-0.5.2.0...
+[ 1 of 15] Compiling Paths_wreq       ( dist/dist-sandbox-5247172a/build/autogen/Paths_wreq.hs, dist/dist-sandbox-5247172a/build/Paths_wreq.o )
+[ 2 of 15] Compiling Network.Wreq.Lens.Machinery ( Network/Wreq/Lens/Machinery.hs, dist/dist-sandbox-5247172a/build/Network/Wreq/Lens/Machinery.o )
+[ 3 of 15] Compiling Network.Wreq.Internal.Types ( Network/Wreq/Internal/Types.hs, dist/dist-sandbox-5247172a/build/Network/Wreq/Internal/Types.o )
+[ 4 of 15] Compiling Network.Wreq.Internal.OAuth1 ( Network/Wreq/Internal/OAuth1.hs, dist/dist-sandbox-5247172a/build/Network/Wreq/Internal/OAuth1.o )
+[ 5 of 15] Compiling Network.Wreq.Internal.Lens ( Network/Wreq/Internal/Lens.hs, dist/dist-sandbox-5247172a/build/Network/Wreq/Internal/Lens.o )
+[ 6 of 15] Compiling Network.Wreq.Types ( Network/Wreq/Types.hs, dist/dist-sandbox-5247172a/build/Network/Wreq/Types.o )
+[ 7 of 15] Compiling Network.Wreq.Internal.Link ( Network/Wreq/Internal/Link.hs, dist/dist-sandbox-5247172a/build/Network/Wreq/Internal/Link.o )
+[ 8 of 15] Compiling Network.Wreq.Lens.TH ( Network/Wreq/Lens/TH.hs, dist/dist-sandbox-5247172a/build/Network/Wreq/Lens/TH.o )
+[ 9 of 15] Compiling Network.Wreq.Lens ( Network/Wreq/Lens.hs, dist/dist-sandbox-5247172a/build/Network/Wreq/Lens.o )
+[10 of 15] Compiling Network.Wreq.Internal.AWS ( Network/Wreq/Internal/AWS.hs, dist/dist-sandbox-5247172a/build/Network/Wreq/Internal/AWS.o )
+[11 of 15] Compiling Network.Wreq.Internal ( Network/Wreq/Internal.hs, dist/dist-sandbox-5247172a/build/Network/Wreq/Internal.o )
+[12 of 15] Compiling Network.Wreq.Cache.Store ( Network/Wreq/Cache/Store.hs, dist/dist-sandbox-5247172a/build/Network/Wreq/Cache/Store.o )
+[13 of 15] Compiling Network.Wreq.Cache ( Network/Wreq/Cache.hs, dist/dist-sandbox-5247172a/build/Network/Wreq/Cache.o )
+[14 of 15] Compiling Network.Wreq     ( Network/Wreq.hs, dist/dist-sandbox-5247172a/build/Network/Wreq.o )
+[15 of 15] Compiling Network.Wreq.Session ( Network/Wreq/Session.hs, dist/dist-sandbox-5247172a/build/Network/Wreq/Session.o )
+Creating package registration file:
+/tmp/pkgConf-wreq-0.5.219988988141548233367.0
+Installing library in
+/home/yggdralisk/Desktop/100DaysOfCode/Haskell/MangaScrapper/.cabal-sandbox/lib/x86_64-linux-ghc-8.0.2/wreq-0.5.2.0-D7LuHOBSBfZFLpQ2J0qt5L
+Registering wreq-0.5.2.0...

@@ -1,0 +1,22 @@
+Configuring simple-sendfile-0.2.26...
+Building simple-sendfile-0.2.26...
+Preprocessing library simple-sendfile-0.2.26...
+[1 of 4] Compiling Network.Sendfile.Types ( Network/Sendfile/Types.hs, dist/dist-sandbox-5247172a/build/Network/Sendfile/Types.o )
+[2 of 4] Compiling Network.Sendfile.Linux ( dist/dist-sandbox-5247172a/build/Network/Sendfile/Linux.hs, dist/dist-sandbox-5247172a/build/Network/Sendfile/Linux.o )
+
+Network/Sendfile/Linux.hsc:12:1: warning: [-Wunused-imports]
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+
+Network/Sendfile/Linux.hsc:17:1: warning: [-Wunused-imports]
+    The import of ‘Data.Int’ is redundant
+      except perhaps to import instances from ‘Data.Int’
+    To import instances alone, use: import Data.Int()
+[3 of 4] Compiling System.Linux.Sendfile ( System/Linux/Sendfile.hs, dist/dist-sandbox-5247172a/build/System/Linux/Sendfile.o )
+[4 of 4] Compiling Network.Sendfile ( Network/Sendfile.hs, dist/dist-sandbox-5247172a/build/Network/Sendfile.o )
+Creating package registration file:
+/tmp/pkgConf-simple-sendfile-0.23524062191600028624.26
+Installing library in
+/home/yggdralisk/Desktop/100DaysOfCode/Haskell/MangaScrapper/.cabal-sandbox/lib/x86_64-linux-ghc-8.0.2/simple-sendfile-0.2.26-H247dkUNm3EF7QtNqrpZUm
+Registering simple-sendfile-0.2.26...

@@ -1,0 +1,45 @@
+[1 of 1] Compiling Main             ( /tmp/cabal-tmp-31936/servant-0.12.1/dist/dist-sandbox-5247172a/setup/setup.hs, /tmp/cabal-tmp-31936/servant-0.12.1/dist/dist-sandbox-5247172a/setup/Main.o )
+Linking /tmp/cabal-tmp-31936/servant-0.12.1/dist/dist-sandbox-5247172a/setup/setup ...
+Warning: servant.cabal: Unknown fields: build-tool-depends (line 125)
+Fields allowed in this section:
+type, main-is, test-module, buildable, build-tools, build-depends,
+cpp-options, cc-options, ld-options, pkgconfig-depends, frameworks,
+extra-framework-dirs, c-sources, js-sources, default-language,
+other-languages, default-extensions, other-extensions, extensions,
+extra-libraries, extra-ghci-libraries, extra-lib-dirs, includes,
+install-includes, include-dirs, hs-source-dirs, other-modules,
+ghc-prof-options, ghcjs-prof-options, ghc-shared-options,
+ghcjs-shared-options, ghc-options, ghcjs-options, jhc-options,
+hugs-options, nhc98-options
+Configuring servant-0.12.1...
+Building servant-0.12.1...
+Preprocessing library servant-0.12.1...
+[ 1 of 24] Compiling Servant.API.WithNamedContext ( src/Servant/API/WithNamedContext.hs, dist/dist-sandbox-5247172a/build/Servant/API/WithNamedContext.o )
+[ 2 of 24] Compiling Servant.API.Verbs ( src/Servant/API/Verbs.hs, dist/dist-sandbox-5247172a/build/Servant/API/Verbs.o )
+[ 3 of 24] Compiling Servant.API.Vault ( src/Servant/API/Vault.hs, dist/dist-sandbox-5247172a/build/Servant/API/Vault.o )
+[ 4 of 24] Compiling Servant.API.Sub  ( src/Servant/API/Sub.hs, dist/dist-sandbox-5247172a/build/Servant/API/Sub.o )
+[ 5 of 24] Compiling Servant.API.ReqBody ( src/Servant/API/ReqBody.hs, dist/dist-sandbox-5247172a/build/Servant/API/ReqBody.o )
+[ 6 of 24] Compiling Servant.API.RemoteHost ( src/Servant/API/RemoteHost.hs, dist/dist-sandbox-5247172a/build/Servant/API/RemoteHost.o )
+[ 7 of 24] Compiling Servant.API.Raw  ( src/Servant/API/Raw.hs, dist/dist-sandbox-5247172a/build/Servant/API/Raw.o )
+[ 8 of 24] Compiling Servant.API.QueryParam ( src/Servant/API/QueryParam.hs, dist/dist-sandbox-5247172a/build/Servant/API/QueryParam.o )
+[ 9 of 24] Compiling Servant.API.IsSecure ( src/Servant/API/IsSecure.hs, dist/dist-sandbox-5247172a/build/Servant/API/IsSecure.o )
+[10 of 24] Compiling Servant.API.HttpVersion ( src/Servant/API/HttpVersion.hs, dist/dist-sandbox-5247172a/build/Servant/API/HttpVersion.o )
+[11 of 24] Compiling Servant.API.Header ( src/Servant/API/Header.hs, dist/dist-sandbox-5247172a/build/Servant/API/Header.o )
+[12 of 24] Compiling Servant.API.ResponseHeaders ( src/Servant/API/ResponseHeaders.hs, dist/dist-sandbox-5247172a/build/Servant/API/ResponseHeaders.o )
+[13 of 24] Compiling Servant.API.Experimental.Auth ( src/Servant/API/Experimental/Auth.hs, dist/dist-sandbox-5247172a/build/Servant/API/Experimental/Auth.o )
+[14 of 24] Compiling Servant.API.Empty ( src/Servant/API/Empty.hs, dist/dist-sandbox-5247172a/build/Servant/API/Empty.o )
+[15 of 24] Compiling Servant.API.Description ( src/Servant/API/Description.hs, dist/dist-sandbox-5247172a/build/Servant/API/Description.o )
+[16 of 24] Compiling Servant.API.ContentTypes ( src/Servant/API/ContentTypes.hs, dist/dist-sandbox-5247172a/build/Servant/API/ContentTypes.o )
+[17 of 24] Compiling Servant.API.Capture ( src/Servant/API/Capture.hs, dist/dist-sandbox-5247172a/build/Servant/API/Capture.o )
+[18 of 24] Compiling Servant.API.BasicAuth ( src/Servant/API/BasicAuth.hs, dist/dist-sandbox-5247172a/build/Servant/API/BasicAuth.o )
+[19 of 24] Compiling Servant.API.Alternative ( src/Servant/API/Alternative.hs, dist/dist-sandbox-5247172a/build/Servant/API/Alternative.o )
+[20 of 24] Compiling Servant.API.TypeLevel ( src/Servant/API/TypeLevel.hs, dist/dist-sandbox-5247172a/build/Servant/API/TypeLevel.o )
+[21 of 24] Compiling Servant.Utils.Links ( src/Servant/Utils/Links.hs, dist/dist-sandbox-5247172a/build/Servant/Utils/Links.o )
+[22 of 24] Compiling Servant.API      ( src/Servant/API.hs, dist/dist-sandbox-5247172a/build/Servant/API.o )
+[23 of 24] Compiling Servant.API.Internal.Test.ComprehensiveAPI ( src/Servant/API/Internal/Test/ComprehensiveAPI.hs, dist/dist-sandbox-5247172a/build/Servant/API/Internal/Test/ComprehensiveAPI.o )
+[24 of 24] Compiling Servant.Utils.Enter ( src/Servant/Utils/Enter.hs, dist/dist-sandbox-5247172a/build/Servant/Utils/Enter.o )
+Creating package registration file:
+/tmp/pkgConf-servant-0.121036140795463480570.1
+Installing library in
+/home/yggdralisk/Desktop/100DaysOfCode/Haskell/MangaScrapper/.cabal-sandbox/lib/x86_64-linux-ghc-8.0.2/servant-0.12.1-6jKIuhBv8oNIEMYpV7PQk0
+Registering servant-0.12.1...

@@ -1,0 +1,13 @@
+Configuring th-lift-0.7.7...
+Building th-lift-0.7.7...
+Preprocessing library th-lift-0.7.7...
+[1 of 1] Compiling Language.Haskell.TH.Lift ( src/Language/Haskell/TH/Lift.hs, dist/dist-sandbox-5247172a/build/Language/Haskell/TH/Lift.o )
+
+src/Language/Haskell/TH/Lift.hs:247:15: warning: [-Wname-shadowing]
+    This binding for ‘nameSpace’ shadows the existing binding
+      imported from ‘Language.Haskell.TH.Syntax’ at src/Language/Haskell/TH/Lift.hs:38:1-33
+Creating package registration file:
+/tmp/pkgConf-th-lift-0.71497983152038664370.7
+Installing library in
+/home/yggdralisk/Desktop/100DaysOfCode/Haskell/MangaScrapper/.cabal-sandbox/lib/x86_64-linux-ghc-8.0.2/th-lift-0.7.7-HmPutZp7fvD1Cct2ESXcaT
+Registering th-lift-0.7.7...

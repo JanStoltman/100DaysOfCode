@@ -1,0 +1,34 @@
+Configuring monad-logger-0.3.28...
+Building monad-logger-0.3.28...
+Preprocessing library monad-logger-0.3.28...
+[1 of 2] Compiling Control.Monad.Logger ( Control/Monad/Logger.hs, dist/dist-sandbox-5247172a/build/Control/Monad/Logger.o )
+
+Control/Monad/Logger.hs:126:1: warning: [-Wdeprecations]
+    Module ‘Control.Monad.Trans.Error’ is deprecated:
+      Use Control.Monad.Trans.Except instead
+
+Control/Monad/Logger.hs:224:26: warning: [-Wdeprecations]
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+Control/Monad/Logger.hs:224:51: warning: [-Wdeprecations]
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+Control/Monad/Logger.hs:242:28: warning: [-Wdeprecations]
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+Control/Monad/Logger.hs:242:55: warning: [-Wdeprecations]
+    In the use of type constructor or class ‘ErrorT’
+    (imported from Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+[2 of 2] Compiling Control.Monad.Logger.CallStack ( Control/Monad/Logger/CallStack.hs, dist/dist-sandbox-5247172a/build/Control/Monad/Logger/CallStack.o )
+Creating package registration file:
+/tmp/pkgConf-monad-logger-0.31376710097927612902.28
+Installing library in
+/home/yggdralisk/Desktop/100DaysOfCode/Haskell/MangaScrapper/.cabal-sandbox/lib/x86_64-linux-ghc-8.0.2/monad-logger-0.3.28-2ypcbcIXJta7w4ebvF9qkW
+Registering monad-logger-0.3.28...

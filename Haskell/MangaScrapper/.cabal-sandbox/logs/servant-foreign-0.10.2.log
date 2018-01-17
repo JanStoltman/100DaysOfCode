@@ -1,0 +1,22 @@
+Warning: servant-foreign.cabal: Unknown fields: build-tool-depends (line 74)
+Fields allowed in this section:
+type, main-is, test-module, buildable, build-tools, build-depends,
+cpp-options, cc-options, ld-options, pkgconfig-depends, frameworks,
+extra-framework-dirs, c-sources, js-sources, default-language,
+other-languages, default-extensions, other-extensions, extensions,
+extra-libraries, extra-ghci-libraries, extra-lib-dirs, includes,
+install-includes, include-dirs, hs-source-dirs, other-modules,
+ghc-prof-options, ghcjs-prof-options, ghc-shared-options,
+ghcjs-shared-options, ghc-options, ghcjs-options, jhc-options,
+hugs-options, nhc98-options
+Configuring servant-foreign-0.10.2...
+Building servant-foreign-0.10.2...
+Preprocessing library servant-foreign-0.10.2...
+[1 of 3] Compiling Servant.Foreign.Internal ( src/Servant/Foreign/Internal.hs, dist/dist-sandbox-5247172a/build/Servant/Foreign/Internal.o )
+[2 of 3] Compiling Servant.Foreign.Inflections ( src/Servant/Foreign/Inflections.hs, dist/dist-sandbox-5247172a/build/Servant/Foreign/Inflections.o )
+[3 of 3] Compiling Servant.Foreign  ( src/Servant/Foreign.hs, dist/dist-sandbox-5247172a/build/Servant/Foreign.o )
+Creating package registration file:
+/tmp/pkgConf-servant-foreign-0.1013780686242999170.2
+Installing library in
+/home/yggdralisk/Desktop/100DaysOfCode/Haskell/MangaScrapper/.cabal-sandbox/lib/x86_64-linux-ghc-8.0.2/servant-foreign-0.10.2-CBtRj9tuKPTBNn5LeFRtu6
+Registering servant-foreign-0.10.2...

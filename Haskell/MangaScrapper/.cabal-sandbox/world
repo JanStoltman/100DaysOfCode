@@ -1,0 +1,8 @@
+servant-lucid -any
+servant-blaze -any
+servant-purescript -any
+wreq -any
+scalpel -any
+servant-server -any
+servant -any
+scalpel-core -any

@@ -1,0 +1,17 @@
+Configuring purescript-bridge-0.11.1.2...
+Building purescript-bridge-0.11.1.2...
+Preprocessing library purescript-bridge-0.11.1.2...
+[1 of 9] Compiling Language.PureScript.Bridge.TypeParameters ( src/Language/PureScript/Bridge/TypeParameters.hs, dist/dist-sandbox-5247172a/build/Language/PureScript/Bridge/TypeParameters.o )
+[2 of 9] Compiling Language.PureScript.Bridge.TypeInfo ( src/Language/PureScript/Bridge/TypeInfo.hs, dist/dist-sandbox-5247172a/build/Language/PureScript/Bridge/TypeInfo.o )
+[3 of 9] Compiling Language.PureScript.Bridge.SumType ( src/Language/PureScript/Bridge/SumType.hs, dist/dist-sandbox-5247172a/build/Language/PureScript/Bridge/SumType.o )
+[4 of 9] Compiling Language.PureScript.Bridge.Printer ( src/Language/PureScript/Bridge/Printer.hs, dist/dist-sandbox-5247172a/build/Language/PureScript/Bridge/Printer.o )
+[5 of 9] Compiling Language.PureScript.Bridge.Builder ( src/Language/PureScript/Bridge/Builder.hs, dist/dist-sandbox-5247172a/build/Language/PureScript/Bridge/Builder.o )
+[6 of 9] Compiling Language.PureScript.Bridge.PSTypes ( src/Language/PureScript/Bridge/PSTypes.hs, dist/dist-sandbox-5247172a/build/Language/PureScript/Bridge/PSTypes.o )
+[7 of 9] Compiling Language.PureScript.Bridge.Primitives ( src/Language/PureScript/Bridge/Primitives.hs, dist/dist-sandbox-5247172a/build/Language/PureScript/Bridge/Primitives.o )
+[8 of 9] Compiling Language.PureScript.Bridge.Tuple ( src/Language/PureScript/Bridge/Tuple.hs, dist/dist-sandbox-5247172a/build/Language/PureScript/Bridge/Tuple.o )
+[9 of 9] Compiling Language.PureScript.Bridge ( src/Language/PureScript/Bridge.hs, dist/dist-sandbox-5247172a/build/Language/PureScript/Bridge.o )
+Creating package registration file:
+/tmp/pkgConf-purescript-bridge-0.11.11330573317603570492.2
+Installing library in
+/home/yggdralisk/Desktop/100DaysOfCode/Haskell/MangaScrapper/.cabal-sandbox/lib/x86_64-linux-ghc-8.0.2/purescript-bridge-0.11.1.2-4kq2lU6jaPrBLg9ldqPxhI
+Registering purescript-bridge-0.11.1.2...

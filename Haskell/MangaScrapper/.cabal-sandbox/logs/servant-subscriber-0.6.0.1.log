@@ -1,0 +1,28 @@
+Configuring servant-subscriber-0.6.0.1...
+Building servant-subscriber-0.6.0.1...
+Preprocessing library servant-subscriber-0.6.0.1...
+[1 of 8] Compiling Servant.Subscriber.Subscribable ( src/Servant/Subscriber/Subscribable.hs, dist/dist-sandbox-5247172a/build/Servant/Subscriber/Subscribable.o )
+
+src/Servant/Subscriber/Subscribable.hs:79:10: warning: [-Wmissing-methods]
+    • No explicit implementation for
+        ‘hoistServerWithContext’
+    • In the instance declaration for
+        ‘HasServer (Subscribable :> sublayout) context’
+[2 of 8] Compiling Servant.Subscriber.Types ( src/Servant/Subscriber/Types.hs, dist/dist-sandbox-5247172a/build/Servant/Subscriber/Types.o )
+[3 of 8] Compiling Servant.Subscriber.Request ( src/Servant/Subscriber/Request.hs, dist/dist-sandbox-5247172a/build/Servant/Subscriber/Request.o )
+[4 of 8] Compiling Servant.Subscriber.Response ( src/Servant/Subscriber/Response.hs, dist/dist-sandbox-5247172a/build/Servant/Subscriber/Response.o )
+[5 of 8] Compiling Servant.Subscriber.Backend ( src/Servant/Subscriber/Backend.hs, dist/dist-sandbox-5247172a/build/Servant/Subscriber/Backend.o )
+[6 of 8] Compiling Servant.Subscriber.Backend.Wai ( src/Servant/Subscriber/Backend/Wai.hs, dist/dist-sandbox-5247172a/build/Servant/Subscriber/Backend/Wai.o )
+[7 of 8] Compiling Servant.Subscriber.Client ( src/Servant/Subscriber/Client.hs, dist/dist-sandbox-5247172a/build/Servant/Subscriber/Client.o )
+[8 of 8] Compiling Servant.Subscriber ( src/Servant/Subscriber.hs, dist/dist-sandbox-5247172a/build/Servant/Subscriber.o )
+Preprocessing executable 'subscriber-psGenerator' for
+servant-subscriber-0.6.0.1...
+[1 of 1] Compiling Main             ( app/PSGenerator.hs, dist/dist-sandbox-5247172a/build/subscriber-psGenerator/subscriber-psGenerator-tmp/Main.o )
+Linking dist/dist-sandbox-5247172a/build/subscriber-psGenerator/subscriber-psGenerator ...
+Creating package registration file:
+/tmp/pkgConf-servant-subscriber-0.6.01194953865894429689.1
+Installing library in
+/home/yggdralisk/Desktop/100DaysOfCode/Haskell/MangaScrapper/.cabal-sandbox/lib/x86_64-linux-ghc-8.0.2/servant-subscriber-0.6.0.1-6EXvwxnKK5u9Swi0BiF0e5
+Installing executable(s) in
+/home/yggdralisk/Desktop/100DaysOfCode/Haskell/MangaScrapper/.cabal-sandbox/bin
+Registering servant-subscriber-0.6.0.1...

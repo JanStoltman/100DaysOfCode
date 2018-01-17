@@ -1,0 +1,13 @@
+Configuring uri-bytestring-0.3.1.0...
+Building uri-bytestring-0.3.1.0...
+Preprocessing library uri-bytestring-0.3.1.0...
+[1 of 5] Compiling URI.ByteString.Types ( src/URI/ByteString/Types.hs, dist/dist-sandbox-5247172a/build/URI/ByteString/Types.o )
+[2 of 5] Compiling URI.ByteString.Lens ( src/URI/ByteString/Lens.hs, dist/dist-sandbox-5247172a/build/URI/ByteString/Lens.o )
+[3 of 5] Compiling URI.ByteString.Internal ( src/URI/ByteString/Internal.hs, dist/dist-sandbox-5247172a/build/URI/ByteString/Internal.o )
+[4 of 5] Compiling URI.ByteString   ( src/URI/ByteString.hs, dist/dist-sandbox-5247172a/build/URI/ByteString.o )
+[5 of 5] Compiling URI.ByteString.QQ ( src/URI/ByteString/QQ.hs, dist/dist-sandbox-5247172a/build/URI/ByteString/QQ.o )
+Creating package registration file:
+/tmp/pkgConf-uri-bytestring-0.3.11780695788709393584.0
+Installing library in
+/home/yggdralisk/Desktop/100DaysOfCode/Haskell/MangaScrapper/.cabal-sandbox/lib/x86_64-linux-ghc-8.0.2/uri-bytestring-0.3.1.0-1NvL5PeQOiSHJcBN9MjV7p
+Registering uri-bytestring-0.3.1.0...

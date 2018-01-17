@@ -1,0 +1,28 @@
+Configuring vault-0.3.0.7...
+Building vault-0.3.0.7...
+Preprocessing library vault-0.3.0.7...
+[1 of 5] Compiling Data.Unique.Really ( src/Data/Unique/Really.hs, dist/dist-sandbox-5247172a/build/Data/Unique/Really.o )
+
+src/Data/Unique/Really.hs:6:1: warning: [-Wunused-imports]
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+[2 of 5] Compiling Data.Vault.ST.Lazy ( src/Data/Vault/ST/Lazy.hs, dist/dist-sandbox-5247172a/build/Data/Vault/ST/Lazy.o )
+
+src/Data/Vault/ST/ST.hs:17:1: warning: [-Wunused-imports]
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+[3 of 5] Compiling Data.Vault.Lazy  ( src/Data/Vault/Lazy.hs, dist/dist-sandbox-5247172a/build/Data/Vault/Lazy.o )
+[4 of 5] Compiling Data.Vault.ST.Strict ( src/Data/Vault/ST/Strict.hs, dist/dist-sandbox-5247172a/build/Data/Vault/ST/Strict.o )
+
+src/Data/Vault/ST/ST.hs:17:1: warning: [-Wunused-imports]
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+[5 of 5] Compiling Data.Vault.Strict ( src/Data/Vault/Strict.hs, dist/dist-sandbox-5247172a/build/Data/Vault/Strict.o )
+Creating package registration file:
+/tmp/pkgConf-vault-0.3.013780686242999170.7
+Installing library in
+/home/yggdralisk/Desktop/100DaysOfCode/Haskell/MangaScrapper/.cabal-sandbox/lib/x86_64-linux-ghc-8.0.2/vault-0.3.0.7-4nKtFaNRHdaApG6UonCYFj
+Registering vault-0.3.0.7...
