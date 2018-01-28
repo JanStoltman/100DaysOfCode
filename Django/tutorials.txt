@@ -1,1 +1,2 @@
 https://www.tutorialspoint.com/restful/restful_introduction.htm
+https://code.djangoproject.com/wiki/Tutorials
