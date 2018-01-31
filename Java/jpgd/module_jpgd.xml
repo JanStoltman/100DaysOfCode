@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_jpgd" default="compile.module.jpgd">
+  <dirname property="module.jpgd.basedir" file="${ant.file.module_jpgd}"/>
+  
+  <property name="module.jdk.home.jpgd" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.jpgd" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.jpgd" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.jpgd" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="jpgd.output.dir" value="${module.jpgd.basedir}/out/production/jpgd"/>
+  <property name="jpgd.testoutput.dir" value="${module.jpgd.basedir}/out/test/jpgd"/>
+  
+  <path id="jpgd.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="jpgd.module.production.classpath">
+    <path refid="${module.jdk.classpath.jpgd}"/>
+    <path refid="library.kotlinjavaruntime.classpath"/>
+  </path>
+  
+  <path id="jpgd.runtime.production.module.classpath">
+    <pathelement location="${jpgd.output.dir}"/>
+    <path refid="library.kotlinjavaruntime.classpath"/>
+  </path>
+  
+  <path id="jpgd.module.classpath">
+    <path refid="${module.jdk.classpath.jpgd}"/>
+    <pathelement location="${jpgd.output.dir}"/>
+    <path refid="library.kotlinjavaruntime.classpath"/>
+  </path>
+  
+  <path id="jpgd.runtime.module.classpath">
+    <pathelement location="${jpgd.testoutput.dir}"/>
+    <pathelement location="${jpgd.output.dir}"/>
+    <path refid="library.kotlinjavaruntime.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.jpgd">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.jpgd">
+    <patternset refid="excluded.from.module.jpgd"/>
+  </patternset>
+  
+  <path id="jpgd.module.sourcepath">
+    <dirset dir="${module.jpgd.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.jpgd" depends="compile.module.jpgd.production,compile.module.jpgd.tests" description="Compile module jpgd"/>
+  
+  <target name="compile.module.jpgd.production" depends="register.custom.compilers" description="Compile module jpgd; production classes">
+    <mkdir dir="${jpgd.output.dir}"/>
+    <javac2 destdir="${jpgd.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.jpgd}/javac">
+      <compilerarg line="${compiler.args.jpgd}"/>
+      <bootclasspath refid="jpgd.module.bootclasspath"/>
+      <classpath refid="jpgd.module.production.classpath"/>
+      <src refid="jpgd.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.jpgd"/>
+    </javac2>
+    
+    <copy todir="${jpgd.output.dir}">
+      <fileset dir="${module.jpgd.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.jpgd.tests" depends="register.custom.compilers,compile.module.jpgd.production" description="compile module jpgd; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.jpgd" description="cleanup module">
+    <delete dir="${jpgd.output.dir}"/>
+    <delete dir="${jpgd.testoutput.dir}"/>
+  </target>
+</project>
