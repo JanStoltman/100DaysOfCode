@@ -1,0 +1,62 @@
+def flatten[T](X:List[List[T]]):List[T] = {
+  if (X.length == 0) throw new Exception("Pusta lista jako argument")
+  else if (X.length == 1) X.head
+  else X.head ++ flatten(X.tail)
+}
+
+def count[T](X:(T,List[T])):Int = {
+  if (X._2.length == 0) 0
+  else if (X._1 == X._2.head) 1 + count((X._1, X._2.tail))
+  else count((X._1, X._2.tail))
+}
+
+def replicate[T](X:(T,Int)):List[T] = {
+  if(X._2 < 0) throw new Exception("Ujemna liczba powtorzen")
+  else if(X._2 == 0) List()
+  else List(X._1) ++ replicate((X._1,X._2 - 1))
+}
+
+def sqrtList (X:List[Int]):List[Int] = {
+  if(X.length == 0) throw new Exception("Podana pust lista!")
+  else if(X.length == 1) List(X.head * X.head)
+  else List(X.head * X.head) ++ sqrtList(X.tail)
+}
+
+def palindrome [T](X:List[T]) = {
+  X == X.reverse
+}
+
+def listLength [T](X:List[T]):Int = {
+  if(X == Nil) 0
+  else 1 + listLength(X.tail)
+}
+
+/************************************************************************************/
+
+let rec flatten x =
+	if x=[] then failwith "pusta lista"
+ 	else if List.length x = 1 then List.hd x
+ 	else List.hd x@flatten(List.tl x);;
+
+let rec count x = 
+	if List.length(snd x) = 0 then 0
+	else if fst x = List.hd(snd x) then 1 
+		+ count(fst x,List.tl(snd x))
+	else count(fst x,List.tl(snd x));;
+
+let rec replicate x =
+	if(snd x < 0) then failwith "Ujemna liczba powtorzen"
+	else if(snd x = 0) then []
+	else [fst x]@replicate(fst x, snd x - 1);;
+
+let rec sqrtList x =
+	if List.length x = 0 then failwith "Podano pusta liste"
+	else if List.length x = 1 then [List.hd x * List.hd x]
+	else [List.hd x * List.hd x]@sqrtList(List.tl x);;
+
+let rec palindrome x =
+	x = List.rev x;;
+
+let rec listLength x = 
+	if x = [] then 0
+	else 1 + listLength(List.tl x);;
