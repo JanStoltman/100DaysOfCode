@@ -7,8 +7,14 @@ class Algorithm:
         pass
 
     def get_fitness(self, creature):
-        sum = 0
-        for val in creature.matrix:
-            sum += self.flow[val[0]][val[1]] * self.flow[val[0]][val[1]]
+        print(creature.matrix)
+        result = 0
+        for i in range(0, len(creature.matrix)):
+            for j in range(i, len(creature.matrix)):
+                val = creature.matrix[i]
+                val2 = creature.matrix[j]
+                d = self.dist[val[0]][val2[0]]
+                f = self.flow[val[1]][val2[1]]
+                result += f * d
 
-        print(sum)
+        print('Fitness ' + str(result))

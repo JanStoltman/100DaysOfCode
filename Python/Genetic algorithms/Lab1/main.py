@@ -1,6 +1,6 @@
-from Reader import Reader
-from Creature import Creature
-from Algorithm import Algorithm
+from Lab1.Reader import Reader
+from Lab1.Creature import Creature
+from Lab1.Algorithm import Algorithm
 
 files = ['had12', 'had14', 'had16', 'had18', 'had20']
 
@@ -10,10 +10,10 @@ def main():
     r.print()
 
     c = Creature()
-    c.fill_randomly([1,2,3,4], [1, 2, 3, 4])
+    c.fill_randomly([0, 1, 2, 3], [0, 1, 2, 3])  # First value is zero
     c.mutate()
 
-    Algorithm(r.flow,r.dist).get_fitness(c)
+    Algorithm(r.flow, r.dist).get_fitness(c)
 
 
 if __name__ == "__main__":

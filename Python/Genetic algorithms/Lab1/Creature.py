@@ -8,10 +8,10 @@ class Creature:
         self.matrix = matrix
 
     def fill_randomly(self, fabs, locs):
-        for fab in fabs:
-            i = randint(1, len(locs)) - 1
-            self.matrix.append([fab, locs[i]])
-            del locs[i]
+        for loc in locs:
+            i = randint(1, len(fabs)) - 1
+            self.matrix.append([loc, fabs[i]])
+            del fabs[i]
 
     def mutate(self):
         i = randint(0, len(self.matrix) - 1)
