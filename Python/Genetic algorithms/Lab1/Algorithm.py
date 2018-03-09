@@ -1,7 +1,14 @@
+from Lab1.Creature import Creature
 class Algorithm:
-    def __init__(self, flow, dist):
+    def __init__(self, flow, dist, pop_size, init_pop, generations, pm, px, tour):
+        self.population = init_pop
         self.flow = flow
         self.dist = dist
+        self.pop_size = pop_size
+        self.generations = generations
+        self.pm = pm
+        self.px = px
+        self.tour = tour
 
     def run(self):
         pass
@@ -16,5 +23,3 @@ class Algorithm:
                 d = self.dist[val[0]][val2[0]]
                 f = self.flow[val[1]][val2[1]]
                 result += f * d
-
-        print('Fitness ' + str(result))
