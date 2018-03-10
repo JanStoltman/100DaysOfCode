@@ -1,4 +1,5 @@
 from random import randint
+import sys
 
 
 class Creature:
@@ -6,6 +7,7 @@ class Creature:
         if matrix is None:
             matrix = []
         self.matrix = matrix
+        self.eval = sys.maxsize
 
     def fill_randomly(self, fabs, locs):
         for loc in locs:

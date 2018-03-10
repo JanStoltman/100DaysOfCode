@@ -1,4 +1,3 @@
-from Lab1.Creature import Creature
 class Algorithm:
     def __init__(self, flow, dist, pop_size, init_pop, generations, pm, px, tour):
         self.population = init_pop
@@ -11,6 +10,19 @@ class Algorithm:
         self.tour = tour
 
     def run(self):
+        for i in range(0, self.pop_size):
+            pass
+
+    def selection(self):
+        pass
+
+    def crossover(self):
+        pass
+
+    def tournament(self):
+        pass
+
+    def roulette(self):
         pass
 
     def get_fitness(self, creature):
@@ -23,3 +35,4 @@ class Algorithm:
                 d = self.dist[val[0]][val2[0]]
                 f = self.flow[val[1]][val2[1]]
                 result += f * d
+        creature.eval = result
