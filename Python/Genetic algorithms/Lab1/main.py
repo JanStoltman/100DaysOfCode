@@ -6,9 +6,11 @@ files = {4: 'had4', 12: 'had12', 14: 'had14', 16: 'had16', 18: 'had18', 20: 'had
 
 
 def generate_population(pop_size, file_size):
-    population = [Creature()] * pop_size
-    for c in population:
+    population = []
+    for i in range(0,pop_size):
+        c = Creature()
         c.fill_randomly([i for i in range(0, file_size)], [i for i in range(0, file_size)])
+        population.append(c)
     return population
 
 
@@ -17,13 +19,13 @@ def main():
     r = Reader(files[file_size])
 
     pop_size = 10
-    generations = 10
+    generations = 1
     pm = 0.7
     px = 0.01
-    tour = 5
+    tour = 2
 
     init_pop = generate_population(pop_size, file_size)
-    a = Algorithm(r.flow, r.dist, pop_size, init_pop, generations, pm, px, tour)
+    a = Algorithm(r.flow, r.dist, pop_size, init_pop, generations, pm, px, tour, 't', int(pop_size/2))
     a.run()
 
 
