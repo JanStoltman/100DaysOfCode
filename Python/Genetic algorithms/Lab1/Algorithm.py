@@ -1,5 +1,6 @@
 import random
 import copy
+
 from Lab1.Creature import Creature
 
 
@@ -65,7 +66,8 @@ class Algorithm:
             random.shuffle(self.population)
             tmp = self.population[0:self.tour]
             tmp_pop.append(min(tmp, key=lambda x: x.eval))
-        self.population = tmp_pop
+        self.population.clear()
+        self.population.extend(tmp_pop)
 
     def crossover(self):
         tmp_pop = []
@@ -75,13 +77,45 @@ class Algorithm:
 
         self.population.extend(tmp_pop)
 
-    @staticmethod
-    def breed(mother, father):
+    def breed(self, mother, father):
+        c1, c2 = self.pmx(mother, father)
+        return c1
+
+    def simple(self,mother, father):
         c = Creature()
         l = len(mother.matrix)
         hl = int(l / 2)
         c.set_matrix(mother.matrix[0:hl], father.matrix[hl:l])
         return c
+
+    def pmx(self, mother, father):
+        c1 = copy.deepcopy(mother)
+        c2 = copy.deepcopy(father)
+        size = len(c1.matrix)
+        p1, p2 = [0] * size, [0] * size
+
+        for i in range(0, size):
+            p1[c1.matrix[i][1]] = i
+            p2[c2.matrix[i][1]] = i
+
+        cxpoint1 = random.randint(0, size)
+        cxpoint2 = random.randint(0, size - 1)
+        if cxpoint2 >= cxpoint1:
+            cxpoint2 += 1
+        else:
+            cxpoint1, cxpoint2 = cxpoint2, cxpoint1
+
+        for i in range(cxpoint1, cxpoint2):
+            temp1 = c1.matrix[i][1]
+            temp2 = c2.matrix[i][1]
+
+            c1.matrix[i][1], c1.matrix[p1[temp2]][1] = temp2, temp1
+            c2.matrix[i][1], c2.matrix[p1[temp2]][1] = temp1, temp2
+
+            p1[temp1], p1[temp2] = p1[temp2], p1[temp1]
+            p2[temp1], p2[temp2] = p2[temp2], p2[temp1]
+
+        return c1, c2
 
     def assess_fitness(self, creature):
         creature.check_fabs()
@@ -92,7 +126,7 @@ class Algorithm:
                 val2 = creature.matrix[j]
                 d = self.dist[val[0]][val2[0]]
                 f = self.flow[val[1]][val2[1]]
-                ds =self.dist[val2[0]][val[0]]
+                ds = self.dist[val2[0]][val[0]]
                 fs = self.flow[val2[1]][val[1]]
                 result += f * d + fs * ds
         creature.eval = result

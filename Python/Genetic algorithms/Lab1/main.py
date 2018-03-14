@@ -17,15 +17,16 @@ def generate_population(pop_size, file_size):
 def main():
     file_size = 20
     r = Reader(files[file_size])
+    r.print()
 
-    pop_size = 100
-    generations = 100
+    pop_size = 50
+    generations = 200
     pm = 0.7
     px = 0.01
-    tour = 100
+    tour = 10
 
     init_pop = generate_population(pop_size, file_size)
-    a = Algorithm(r.flow, r.dist, pop_size, init_pop, generations, pm, px, tour, 't', int(pop_size / 2))
+    a = Algorithm(r.flow, r.dist, pop_size, init_pop, generations, pm, px, tour, 't', int(pop_size / 3))
     a.run()
 
 
