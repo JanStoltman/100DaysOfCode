@@ -1,7 +1,10 @@
 import random
 import copy
 
+import sys
+
 from Lab1.Creature import Creature
+from Lab1.Writer import write
 
 
 class Algorithm:
@@ -17,19 +20,24 @@ class Algorithm:
         self.selection_type = selection_type
         self.crossover_size = crossover_size
         self.best = Creature()
+        self.worst = 0
 
     def run(self):
         for generation in range(0, self.generations):
+
+            # Eval all curent gen
             for creature in self.population:
                 self.assess_fitness(creature)
                 if creature.eval < self.best.eval:
                     self.best = copy.deepcopy(creature)
+
+                if creature.eval > self.worst:
+                    self.worst = creature.eval
+
             # self.print_fittest()
             self.selection()
             self.crossover()
             self.mutation()
-
-        print("Best " + str(self.best.eval) + " " + str(self.best.matrix))
 
     def print_fittest(self):
         c = min(self.population, key=lambda x: x.eval)
@@ -51,11 +59,12 @@ class Algorithm:
         mx = max(self.population, key=lambda x: x.eval).eval + mi
         for _ in range(0, self.crossover_size):
             r = random.randint(0, s)
-            i = random.randint(0, len(self.population))
+            i = random.randint(0, len(self.population) - 1)
             while r < s:
                 r += (mx - self.population[i].eval)
                 i += 1
-                if i >= len(self.population): i = 0
+                if i >= len(self.population):
+                    i = 0
 
             tmp_pop.append(self.population[i])
         self.population = tmp_pop
@@ -73,7 +82,9 @@ class Algorithm:
         tmp_pop = []
         while len(self.population) + len(tmp_pop) < self.pop_size:
             random.shuffle(self.population)
-            tmp_pop.append(self.breed(self.population[0], self.population[1]))
+            i = random.uniform(0, 1)
+            if i < self.px:
+                tmp_pop.append(self.breed(self.population[0], self.population[1]))
 
         self.population.extend(tmp_pop)
 
@@ -81,7 +92,7 @@ class Algorithm:
         c1, c2 = self.pmx(mother, father)
         return c1
 
-    def simple(self,mother, father):
+    def simple(self, mother, father):
         c = Creature()
         l = len(mother.matrix)
         hl = int(l / 2)
