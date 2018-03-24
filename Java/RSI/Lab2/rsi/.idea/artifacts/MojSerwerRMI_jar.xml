@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MojSerwerRMI:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MojSerwerRMI_jar</output-path>
+    <root id="archive" name="MojSerwerRMI.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/../MetaClient/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="MojSerwerRMI" />
+    </root>
+  </artifact>
+</component>
