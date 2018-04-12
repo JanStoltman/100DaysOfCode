@@ -2,8 +2,9 @@ import time
 
 from square.node import Node
 
-N = 5
+N = 2
 solutions = 0
+rets = 0
 graph = [[Node(range(1, N + 1)) for _ in range(0, N)] for _ in range(0, N)]
 
 
@@ -37,6 +38,7 @@ def check_cond(r, c):
 
 
 def backtracking(r, c):
+    global rets
     for num in range(1, N + 1):
         graph[r][c].number = num
         if check_cond(r, c):
@@ -50,6 +52,7 @@ def backtracking(r, c):
             else:
                 backtracking(r, c + 1)
         else:
+            rets += 1
             graph[r][c].number = 0
     graph[r][c].number = 0
 
@@ -100,7 +103,8 @@ def readd_val(r, c, dexs):
     readd_row(r, c, val, dexs)
 
 
-def fowardchecking(r, c):
+def forwardchecking(r, c):
+    global rets
     for num in graph[r][c].possibilities.copy():
         graph[r][c].number = num
         dexs, val = drop_val(r,c)
@@ -110,14 +114,15 @@ def fowardchecking(r, c):
                 print('\n')
 
             elif (c == N - 1):
-                fowardchecking(r + 1, 0)
+                forwardchecking(r + 1, 0)
 
             else:
-                fowardchecking(r, c + 1)
+                forwardchecking(r, c + 1)
 
             readd_val(r, c, dexs)
             graph[r][c].number = 0
         else:
+            rets += 1
             readd_val(r, c, dexs)
             graph[r][c].number = 0
 
@@ -131,6 +136,7 @@ def main():
     en = time.time()
     print("Time: " + str(en - st))
     print("Solutins found: " + str(solutions))
+    print("Rets: " + str(rets))
 
 
 if __name__ == "__main__":

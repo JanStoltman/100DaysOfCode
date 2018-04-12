@@ -1,7 +1,10 @@
 import time
 from graph.node import Node
+import random
 
 N = 5
+rets = 0
+used_cols = set([])
 graph = [[Node() for _ in range(0, N)] for _ in range(0, N)]
 
 
@@ -26,26 +29,31 @@ def ch_cd(r, c, val):
     return c == 0 or r == N - 1 or abs(graph[r + 1][c - 1].color - val) >= 1
 
 
+def ch_du(r, c, val):
+    return c == N - 1 or r == 0 or abs(graph[r - 1][c + 1].color - val) >= 1
+
+
+def ch_dd(r, c, val):
+    return c == N - 1 or r == N - 1 or abs(graph[r + 1][c + 1].color - val) >= 1
+
+
 def check_cond(r, c):
-    """
-    :param r: Row index
-    :param c: Column index
-    :return: True if color meets all constraints
-    """
     if graph[r][c].color == -1:
         return False
 
     val = graph[r][c].color
-    return ch_l(r, c, val) and ch_u(r, c, val) and ch_cd(r, c, val) and ch_cu(r, c, val)
+    return ch_l(r, c, val) and ch_u(r, c, val) and ch_cd(r, c, val) and ch_cu(r, c, val) and ch_dd(r, c, val) and ch_du(
+        r, c, val)
 
 
-def backtracking():
+def backtracking(heur):
     for c in range(0, N):
         for r in range(0, N):
-            col = 0
+            col = heur()
             while not check_cond(r, c):
                 graph[r][c].color = col
-                col += 1
+                col = heur(col)
+            used_cols.add(col)
 
     print_graph()
 
@@ -77,12 +85,13 @@ def drop_col(r, c, val):
     d_cd(r, c, val)
 
 
-def fowardchecking():
+def forwardchecking(heur):
     for c in range(0, N):
         for r in range(0, N):
-            col = 0
+            col = heur()
             while col in graph[r][c].disallowed:
-                col += 1
+                col = heur(col)
+            used_cols.add(col)
 
             graph[r][c].color = col
             drop_col(r, c, col)
@@ -91,15 +100,39 @@ def fowardchecking():
 
 
 def fill_graph():
+    global graph
     graph = [[-1 for _ in range(0, N)] for _ in range(0, N)]
 
 
+def next_heur(col=-1):
+    return col + 1
+
+
+def next_two_heur(col=-1):
+    return col + 2
+
+
+def random_heur(col=-1):
+    return random.randint(0, N - 1)
+
+
 def main():
-    fill_graph()
+    global rets
     st = time.time()
-    fowardchecking()
+    print("Back: \n")
+    backtracking(next_heur)
+    print('Used colors: ' + str(len(used_cols)))
+    print('Rets: ' + str(rets))
+
+    used_cols.clear()
+    rets = 0
+
+    print("Fow: \n")
+    forwardchecking(next_heur)
+    print('Used colors: ' + str(len(used_cols)))
+    print('Rets: ' + str(rets))
     en = time.time()
-    print(str(en - st))
+    print('Time ' + str(en - st))
 
 
 if __name__ == '__main__':
